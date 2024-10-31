@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="all" href="style.css" />
+    <title>Paraguay Natural</title>
+    </form>
+    
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+        /* Reset de estilos básicos */
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            color: white;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            transition: background-image 1s ease;
+        }
+
+        form {
+            border-radius: 1em;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            width: 500px;
+            margin: 2rem auto;
+            padding: 1em;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        div {
+            margin-bottom: 1em;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f8f8f8;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        button {
+            background-color: #00bcd4;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0097a7;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="content"></div>
+    
+    <form action="" method="post">
+        <div>
+            <label for="nombre" >Nombre:</label>
+            <input type="text" name="nombre" id="nombre" required>
+        </div>
+        <div>
+            <label for="fecha">Fecha:</label>
+            <input type="date" name="fecha" id="fecha" required>
+        </div>
+        <div>
+            <label for="contenido">Contenido:</label>
+            <textarea id="contenido" name="contenido" required></textarea>
+        </div>
+        <div>
+            <label for="foto">Foto:</label>
+            <input type="text" id="foto" name="foto" required>
+        </div>
+        <div>
+            <button type="submit">Guardar</button>
+        </div>
+    </form>
+
+    <script>
+        const form = document.querySelector("form");
+        form.addEventListener("submit", (evento) => {
+            evento.preventDefault();
+            fetch("guardar-datos.php", {
+                method: "POST",
+                body: new FormData(form)
+            })
+            .then(solicitud => solicitud.json())
+            .then(resultado => {
+                if (resultado.respuesta === "ok") {
+                    alert("Datos guardados con éxito.");
+                    window.location.href = "carga-datos.php";
+                } else {
+                    alert("No se guardó.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

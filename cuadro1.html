@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+DE+Grund:wght@100..400&display=swap');
+        *{
+            box-sizing: border-box;
+        }
+        
+        body{
+            background-color: rgb(255, 255, 255);
+            padding: 0;
+            margin: 0;
+        }
+
+
+
+        #Tituloprincipal{
+            font-family:"Andika", sans-serif;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            margin: 0 auto;
+            padding-top: 2%;
+        }
+
+        #Titulosecundario{
+            text-align: center;
+            font-family: "Playwrite DE Grund", cursive;
+            color: aliceblue;
+            padding-left: 30%;
+            padding-right: 30%;
+            
+
+        }
+        .general{
+            min-height: 100vh;
+            position: relative;
+        }
+        video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 110%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        .capa{
+            position: absolute;
+            top: 0;
+            left: 0;
+            Width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.2;
+            mix-blend-mode: overlay;
+        }
+        .titulos{
+            position: relative;
+            z-index: 2;
+        }
+
+        .card{
+            position: relative;
+            width: 300px;
+            height: 350px;
+            align-items: center;
+            margin-left: 30px;
+            margin-top: 4%;
+            
+        
+            
+        }
+
+        .card .face{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: .5s;
+        
+        }
+        .card .front{
+            transform: perspective(600px) rotateY(0deg);
+            box-shadow: 0px 5px 10px black;
+        }    
+        .card .front img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+
+        .card .front h3{
+            font-family: "Playwrite DE Grund", cursive;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 45px;
+            line-height: 45px;
+            color: white;
+            background: rgba(0, 0, 0, 0.297);
+            text-align: center;
+        }
+
+        #R{
+            padding-top: 50px;
+        }
+
+        .card .back{
+            transform: perspective(600px) rotateY(180deg);
+            background: rgba(0, 0, 0, 0.445);
+            padding: 15px;
+            color: #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0px 10px 15px black;
+            
+            
+        }
+        .card .back h3{
+            font-family:"Andika", sans-serif;
+            font-size: 30px;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+        .card .back p{
+            letter-spacing: 1px;
+            font-family: "Playwrite DE Grund", cursive;
+
+        }
+        .cajapadre{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+        }
+
+        
+
+        .card:hover .front{
+            transform: perspective(600px) rotateY(180deg);
+        }
+        .card:hover .back{
+            transform: perspective(600px) rotateY(360deg);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div>   
+    <main class="general">
+    <div class="titulos">
+        <h1 id="Tituloprincipal">Consejos para el cuidado del medio ambiente</h1>
+    <h3 id="Titulosecundario" >En este apartado te proporcionamos recomendaciones para el cuidado del medio ambiente.
+    </h3>
+    </div>
+    <video muted autoplay loop>
+        <source src="./15072535-uhd_3840_2160_30fps.mp4"
+        type="video/mp4">
+    </video>
+    <div class="capa"></div>
+
+<div class="cajapadre">
+    <div class="card">
+        <div class="face front">
+            <img src="https://images.pexels.com/photos/7262391/pexels-photo-7262391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Reducir, reutilizar y reciclar">
+            <h3>Reducir, reutilizar y reciclar</h3>
+        </div>
+        <div class="face back">
+            <h3>Reducir, reutilizar y reciclar</h3>
+            <p> Minimizar el consumo, darle una segunda vida a los objetos y separar los residuos para su correcto tratamiento.</p>
+            
+        </div>
+    </div>
+
+
+
+    <div class="card">
+        <div class="face front">
+            <img src="https://images.pexels.com/photos/4207905/pexels-photo-4207905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Ahorrar energía y agua">
+            <h3>Ahorrar energía y agua</h3>
+        </div>
+        <div class="face back">
+            <h3>Ahorrar energía y agua</h3>
+            <p> Utilizar eficientemente los recursos, como apagar las luces al salir de una habitación o reparar fugas de agua.</p>
+            
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="face front">
+            <img src="https://images.pexels.com/photos/423928/pexels-photo-423928.jpeg" alt="Optar por transporte sostenible">
+            <h3>Optar por transporte sostenible</h3>
+        </div>
+        <div class="face back">
+            <h3>Optar por transporte sostenible</h3>
+            <p> Utilizar medios de transporte público, bicicleta o caminar siempre que sea posible.</p>
+            
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="https://images.pexels.com/photos/5230924/pexels-photo-5230924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Consumir productos locales y de temporada">
+            <h3>Consumir productos locales.</h3>
+        </div>
+        <div class="face back">
+            <h3>Consumir productos locales y de temporada</h3>
+            <p> Reducir la huella de carbono asociada al transporte de alimentos.  </p>
+            
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="https://images.pexels.com/photos/7656748/pexels-photo-7656748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Evitar el uso de plásticos de un solo uso">
+            <h3>Evitar el uso de plásticos</h3>
+        </div>
+        <div class="face back">
+            <h3>Evitar el uso de plásticos de un solo uso</h3>
+            <p> Utilizar bolsas reutilizables, botellas de agua rellenables y reducir el consumo de productos envueltos en plástico.</p>
+            
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="face front">
+            <img src="https://images.pexels.com/photos/7656996/pexels-photo-7656996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Restauración de ecosistemas">
+            <h3>Restauración de ecosistemas</h3>
+        </div>
+        <div class="face back">
+            <h3>Restauración de ecosistemas</h3>
+            <p> Reforestar áreas deforestadas, proteger humedales y restaurar hábitats naturales.</p>
+            
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="face front">
+            <img src="https://images.pexels.com/photos/12113255/pexels-photo-12113255.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Desarrollo de tecnologías limpias">
+            <h3>Desarrollo de tecnologías</h3>
+        </div>
+        <div class="face back">
+            <h3>Desarrollo de tecnologías limpias</h3>
+            <p> Investigar y desarrollar nuevas tecnologías que reduzcan el impacto ambiental.</p>
+            
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="https://images.pexels.com/photos/11286086/pexels-photo-11286086.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Educación ambiental">
+            <h3>Educación ambiental</h3>
+        </div>
+        <div class="face back">
+            <h3>Educación ambiental</h3>
+            <p> Concientizar a la población sobre la importancia de cuidar el medio ambiente y empoderarla para tomar acciones.</p>
+            
+        </div>
+    </div>
+</div>
+</div>
+</main>
+
+
+</body>
+</html>

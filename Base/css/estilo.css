@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+article{
+    color: white;
+    background-color: crimson;    
+}
+
+img{
+    width: 100%;
+    transition: .3s transform;
+}
+
+.titulo-central{
+    font-size: 3em;
+    text-align: center;
+}
+
+.imagen{
+    overflow: hidden;
+}
+
+.imagen:hover img{
+    transform: scale(1.5);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

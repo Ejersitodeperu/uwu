@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paraguay Natural</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <form id="contactForm" action="contact.php" method="POST">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+    /* Reset de estilos básicos */
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+
+
+    body {
+      background-image: url(https://www.ngenespanol.com/wp-content/uploads/2023/08/las-plantas-se-mueven-por-estos-importantes-motivos-1280x720.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: 'Ubuntu', sans-serif;
+      color: white;
+      transition: background-image 1s ease;
+    }
+
+    header {
+      padding: 1em;
+      background-color: rgba(118, 165, 118, 0.7);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: white;
+      text-align: center;
+      animation: slideIn 2s ease-out;
+    }
+
+    nav.opciones {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav.opciones a {
+      color: cyan;
+      font-size: 1.25rem;
+      text-decoration: none;
+      font-style: italic;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav.opciones a:hover {
+      color: #00bcd4;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    section {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 2rem;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    section p {
+      font-size: 1rem;
+      color: #ddd;
+      padding: 15px 0;
+    }
+
+    .encabezado2, .encabezado3 {
+      text-align: left;
+      padding: 2rem;
+      background-color: rgba(0, 123, 123, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 2s ease-in;
+    }
+
+    .contact {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .contact p {
+      color: #ddd;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .contact label {
+      display: block;
+      font-size: 1rem;
+      color: #ddd;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #333;
+      color: #ddd;
+      font-size: 1rem;
+    }
+
+    .contact textarea {
+      resize: vertical;
+      height: 150px;
+    }
+
+    .contact button {
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact button:hover {
+      background-color: #0097a7;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      border-radius: 10px;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="contenedor">Paraguay Natural</h1>
+    <nav class="opciones">
+        <a href="#contact">Contactos</a>
+        <a id="b2" href="./iniciodesesion.html" target="_blank" rel="noopener noreferrer">Iniciar sesión</a>
+        <a id="a2" href="./registro.html" target="_blank" rel="noopener noreferrer">Registrarse</a>
+      </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Conservación y Biodiversidad: Movilizando Paraguay Hacia la Sustentabilidad</h2>
+      <p>
+        Paraguay está experimentando una crisis ambiental profunda que amenaza tanto a su entorno natural como a la calidad de vida de sus habitantes. La deforestación acelerada, la contaminación de cuerpos de agua y la pérdida de biodiversidad son problemas cruciales que requieren atención inmediata y soluciones sostenibles.
+        Nuestro objetivo es cuidar el medio ambiente en Paraguay creando una comunidad de usuarios que puedan colaborar y compartir el cuidado de la biodiversidad en el país, siguiendo un conjunto de recomendaciones dadas por la comunidad.
+      </p>
+    </section>
+
+    <section class="encabezado2">
+      <h2>ParaguayNatural</h2>
+      <h3>Buscamos mejorar el medio ambiente en Paraguay</h3>
+      <p>
+        En esta página web te proporcionamos consejos prácticos para cuidar el medio ambiente, mapas, números de organizaciones ambientales y un amplio espacio donde puedes compartir tus ideas, opiniones y fotos acerca de cómo cuidas el medio ambiente, tanto en tu hogar como fuera de él.
+      </p>
+    </section>
+    
+    <section class="encabezado3">
+      <h2>Situación Ambiental en Paraguay</h2>
+      <h3>Biodiversidad de Paraguay:</h3>
+      <p>
+        Riqueza Natural: Paraguay es hogar de una biodiversidad rica y diversa. El país cuenta con diversos ecosistemas, incluidos bosques tropicales, humedales, y zonas de pastizales. Es hogar de numerosas especies de flora y fauna, algunas de las cuales son endémicas y están en peligro de extinción.
+      </p>
+      <p>
+        Ecosistemas Clave: Los bosques del Gran Chaco y la región del Pantanal son cruciales para la biodiversidad del país. El Chaco, por ejemplo, es uno de los ecosistemas más grandes de América del Sur y alberga una gran variedad de especies.
+      </p>
+    </section>
+    
+    <section class="encabezado3">
+      <h2>Problemas Ambientales Principales:</h2>
+      <p>
+        Deforestación: La tala indiscriminada de bosques para agricultura y ganadería es una preocupación importante. La deforestación contribuye a la pérdida de hábitats naturales y disminuye la biodiversidad.
+      </p>
+      <p>
+        Contaminación: La contaminación del agua y del suelo es un problema significativo. La actividad agrícola intensiva, el uso de pesticidas y la falta de tratamiento de aguas residuales han afectado la calidad del agua en muchas áreas.
+      </p>
+      <p>
+        Cambio Climático: Paraguay enfrenta los impactos del cambio climático, incluyendo eventos climáticos extremos como sequías y tormentas, que afectan tanto a las comunidades humanas como a los ecosistemas.
+      </p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contacto</h2>
+      <p>
+        Si tienes preguntas, sugerencias o deseas colaborar con nosotros, no dudes en ponerte en contacto. Estamos aquí para escuchar y trabajar juntos en la conservación de nuestro hermoso país.
+      </p>
+      <form id="contactForm" action="contact.php" method="POST">
+        <div class="form-group">
+          <label for="contactName">Nombre:</label>
+          <input type="text" id="contactName" name="contactName" required />
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Correo electrónico:</label>
+          <input type="email" id="contactEmail" name="contactEmail" required />
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">Mensaje:</label>
+          <textarea id="contactMessage" name="contactMessage" required></textarea>
+        </div>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </section>    
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Paraguay Natural. Todos los derechos reservados.</p>
+    <p>Conservemos juntos nuestra biodiversidad.</p>
+  </footer>
+
+  <script>
+    // Cambio de imagen de fondo basado en el desplazamiento
+    document.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      const body = document.body;
+      if (scrollPosition > 300) {
+        body.style.backgroundImage = 'url(https://c.wallhere.com/photos/3e/4e/1920x1200_px_Depth_Of_Field_Green_leaves-551954.jpg!s1)';
+      } else {
+        body.style.backgroundImage = 'url(https://www.ngenespanol.com/wp-content/uploads/2023/08/las-plantas-se-mueven-por-estos-importantes-motivos-1280x720.jpg)';
+      }
+    });
+    
+  </script>
+</body>
+</html>

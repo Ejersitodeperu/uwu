@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(https://www.ngenespanol.com/wp-content/uploads/2023/08/las-plantas-se-mueven-por-estos-importantes-motivos-1280x720.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+h2{
+    font-family: "Ubuntu", sans-serif;
+    color: white;
+    padding: 1px;
+    text-align: left;
+
+}
+h1{
+    font-family: "Ubuntu", sans-serif;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+p{
+    color: white;
+    font-family:"Ubuntu", sans-serif ;
+    
+    
+}
+
+header{
+    padding: 2em;
+    background-color:  rgba(118, 165, 118, 0.27);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+a {
+    font-family: "Ubuntu", sans-serif;;
+    color: cyan;
+    font-size: 25px;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+section > div{
+    background-color: rgba(0, 0, 0, 0.588);
+    padding: 3em;
+    border-radius: 30px;
+}
+
+section {
+    width: 800px;
+    margin: auto;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    justify-content: center;
+}
+
+
+header:hover{
+    background-color: rgba(255, 255, 255, 0.402);
+}
+
+.opciones {
+    display: flex;
+    gap: 3em;
+}
+
+.encabezado2{
+    text-align: center;
+    padding: 40px 0px 40px 0px;
+    
+
+}
+
+.encabezado2 h1{
+    font-size: 2.1rem;
+    font-weight: 200;
+    color: hsl(0, 0%, 100%);
+    padding: 0;
+}
+.encabezado2 h2{
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+
+.encabezado2 p{
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 400;
+    color:hsl(229, 6%, 66%) ;
+    max-width: 600px;
+    margin: 0 auto;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}

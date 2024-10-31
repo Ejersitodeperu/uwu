@@ -1,0 +1,87 @@
+body{
+    background-image: url(https://i.blogs.es/a79716/filtros-naturaleza-nueva/1366_2000.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: "Ubuntu", sans-serif;
+    height: 96dvh;
+    display: grid;
+    place-items: center;
+    
+}
+/* section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    width: 80%;
+    margin: 0 auto;
+} */
+    
+img{
+    width: 100%;
+    border-radius: 5%;
+    transition: all .6s;
+   
+}
+
+form{
+    border-radius: 1em;
+    box-shadow: 0 0 3px pink;
+    width: 320px;
+    height: auto;
+    padding: 4em;
+    background-color: rgba(255, 255, 255, 0.608);
+    margin: 0 auto;*/
+
+
+    div{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+}
+h1{
+    text-align: center;
+    color: rgba(9, 132, 13, 0.83);
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+a{
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(6, 82, 82);
+}

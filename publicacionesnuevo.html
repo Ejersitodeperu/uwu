@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="publicacionesnuevo.css">
+ </head>
+ <body>
+    <div>   
+        <main class="general">
+        <div class="titulos">
+            <h1 id="Tituloprincipal">Paraguay Natural</h1>
+        <h3 id="Titulosecundario" >Bienvenido</h3>
+        <h3 id="siguiente">"Cuidando tu entorno cuidas tu corazón"</h3>
+        </div>
+        <video muted autoplay loop>
+            <source src="./3209571-uhd_3840_2160_25fps.mp4"
+            type="video/mp4">
+        </video>
+        <div class="capa"></div>
+
+        <div>
+</div>
+
+<div class="contenedor">
+
+    <div class="slide">
+
+        
+        <div class="item" style="background-image: url(https://images.pexels.com/photos/7656743/pexels-photo-7656743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);">
+            <div class="content">
+                <div class="name">Tips para el cuidado medioambiental</div>
+                <a href="cuadro1.html" target="_blank">Click Aquí</a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://images.pexels.com/photos/4268530/pexels-photo-4268530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);">
+            <div class="content">
+                <div class="name">ORGANIZACIONES AMBIENTALES</div>
+                
+                <a href="cuadro2.html" target="_blank">Click Aquí</a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://images.pexels.com/photos/7658786/pexels-photo-7658786.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1://i.ibb.co/NSwVv8D/img3.jpg);">
+            <div class="content">
+                <div class="name">argreeva</div>
+                
+                <a href="cuadro1.html" target="_blank">Click Aquí</a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://images.pexels.com/photos/5029862/pexels-photo-5029862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);">
+            <div class="content">
+                <div class="name">afdadfvaf</div>
+                
+                <a href="cuadro1.html" target="_blank">Click Aquí</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="button">
+        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+</div>
+
+<script>
+    let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+})
+</script>
+ </body>
+ </html>
